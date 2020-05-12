@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Isa Costa · UX/UI Designer</title>
+    <!-- LAST UPDATE IN 11 MAY 2020 -->
+    <meta charset="utf-8">
+    <style type="text/css">
+      *, ::before, ::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      body {
+        width: 1024px;
+        margin: 0 auto;
+        font:15px 'Lato', sans-serif;
+        background: #F5F5F5;
+        color: #111;
+      }
+
+      a {
+        text-decoration: none;
+        color: #111
+      }
+
+      h1, h2, h4 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        line-height: 1;
+      }
+
+      h5, h6 {
+        margin: 8px 0 0 0;
+        font-weight: normal;
+        font-size: 15px;
+      }
+
+      h1 {
+        color: #111;
+        font-size: 60px;
+        margin-bottom: 0;
+        font-weight: 300;
+        transform: rotateZ(-3deg) skewX(-14deg);
+      }
+
+      .job-title {
+        padding-top: 10px ;
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        position: absolute;
+        bottom: -4px;
+        left: 75px;
+        color: #000;
+        transform: rotateZ(-3deg) skewX(-14deg);
+      }
+
+      .job-title span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .job-title::before {
+        position: absolute;
+        background: #5FECC8;
+        content: '';
+        left: -6px;
+        top: 8px;
+        height: 20px;
+        width: 171px;
+      }
+      
+
+      h2 {
+        color: #3E00FD;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 23px;
+        margin-bottom: 1.75rem;
+      }
+
+      h3 {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+
+      h4 {
+        color: #111;
+        font-weight: 500;
+        letter-spacing: 1px;
+        font-size: 18px;
+        padding: 15px 0;
+      }
+
+      aside h4 {
+        padding-top: 0;
+      }
+
+      .unstyled {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .skills {
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+
+      .skills li:not(:last-child) {
+        padding-bottom: 8px;
+      }
+
+      .faded {
+        color: #888;
+      }
+
+      .stronger {
+        font-weight: 900;
+      }
+
+      .horizontal li {
+        display: inline-block;
+      }
+
+      .container {
+        background: #FFF;
+        padding: 30px;
+        
+      }
+
+      .container > * {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 2fr;
+        grid-gap: 30px;
+      }
+
+      .container > div {
+        padding-top: 30px;
+      }
+
+      header {
+        margin-bottom: 1.5rem;
+        position: relative;
+      }
+
+      main {
+        margin-left: 30px;
+      }
+
+      .info {
+        text-align: right;
+        color: #888;
+        font-size: 14px;
+      }
+
+      .contact li {
+        line-height: 1.5;
+      }
+
+      .contact li:last-child {
+        padding-bottom: 0;
+      } 
+
+      article:not(:last-of-type) {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #eee;
+      }
+
+      article p {
+        color: #333;
+        padding: 15px 0;
+        line-height: 1.5;
+      }
+
+      .role {
+        font-weight: 400;
+        position: relative;
+      }
+
+      .project {
+        padding: .5rem 0;
+        font-size: 14px;
+      }
+
+      .project strong {
+        text-transform: uppercase;
+        padding-right: 4px;
+      }
+
+      a.project-url {
+        position: relative;
+        padding-left: 35px;
+        margin-left: 10px;
+      }
+
+      a.project-url::before {
+        position: absolute;
+        content: ' ⟶ ';
+        top: 0px;
+        left: 0;
+        color: #FF4D64;
+      } 
+ 
+
+      .project:last-of-type {
+        padding-bottom: 0;
+      }
+
+      .work {
+        font-size: 13px;
+        font-weight: 400;
+        font-style: italic;
+        margin-top: 6px ;
+        color: #888;
+        letter-spacing: .025rem;
+      }
+
+      aside ul {
+        margin-bottom: 1.75rem;
+      }
+
+      .interests {
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 12px;
+        grid-template-rows: 2fr;
+        font-weight: 700;
+      }
+
+      .interests img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: .5rem;
+      }
+
+      .pie {
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 12px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .pie img {
+        width: 45px;
+        height: 45px;
+        margin-bottom: .5rem;
+      }
+
+      .education li {
+        margin-bottom: 4px;
+        font-size: 14px;
+      }
+
+      .education h3 {
+        margin-bottom: 0;
+      }
+
+      .date {
+        font-style: italic;
+        letter-spacing: .025rem;
+      }
+
+      .middot {padding: 0 5px}
+
+      .ast {
+          padding: 0 10px;
+      }
+
+      @media print {
+        body {
+          background: #fff;
+        }
+        h1 {
+          margin-top:0;
+        }
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div>
+          <h1>Isa Costa</h1>
+          <p class="job-title"><span>UX/UI DESIGNER</span></p>
+        </div>
+        <div class="info">
+            <ul class="unstyled contact">
+              <li><strong><a href="https://isacosta.net/">isacosta.net</a></strong></li>
+              <li><a href="mailto:hello@isacosta.net">hello@isacosta.net</a></li>
+              <li>+351 910 446 225</li>
+            </ul>
+        </div>
+      </header>
+      <div>
+        <aside>
+          
+          <h2>Tools & Technologies</h2>
+          
+          <ul class="unstyled skills">
+            <li>Sketch <span class="middot">·</span> Figma <span class="middot">·</span> XD <span class="middot">·</span> Illustrator</li>
+            <li>Photoshop <span class="middot">·</span> Lightroom</li>
+            <li>Visual Studio Code <span class="middot">·</span> Chrome DevTools</li>
+            <li>CSS & HTML <span class="middot">·</span> Web Standards <span class="middot">·</span> Microdata</li>
+            <li>CSS Frameworks <span class="middot">·</span>React (JSX) <span class="middot">·</span>Vue.js</li>
+            <li>Git <span class="middot">·</span> Agile</li>
+          </ul>
+          
+          <h2>HARD SKILLS</h2>
+          
+          <ul class="unstyled skills">
+            <li>Design Principles</li>
+            <li>Visual Communication</li>
+            <li>Information Architecture</li>
+            <li>Wireframing & Prototyping</li>
+            <li>Usability & Research</li>
+            <li>Analytics & User Testing</li>
+            <li>Responsive Web Design</li>
+            <li>SEO & Accessibility</li>
+            <li>Pitch Deck Design</li>
+            <li>Photography</li>
+            <li>Mentoring</li>
+          </ul>
+          
+          <h2>SOFT SKILLS</h2>
+          
+          <ul class="unstyled skills">
+            <li>Design Thinking</li>
+            <li>Problem Solving</li>
+            <li>Critical Thinking</li>
+            <li>Adaptability & Flexibility</li>
+            <li>Curious much</li>
+            <li>Forever Learning & Recycling</li>
+            <li>Minimalist Mindset</li>
+          </ul>
+          
+          <h2>EDUCATION</h2>
+          
+          <ul class="unstyled education">
+            <li><strong>ETIC_</strong></li>
+            <li>Escola de Tecnologias Inovação e Criação</li>
+            <li>Multimedia Professional Course</li>
+            <li><span class="faded">2001 — 2004, Lisbon</span></li>
+          </ul>
+
+          <h2>LANGUAGES</h2>
+
+          <div class="pie">
+            <div><img src="images/pt.svg">Portuguese</div>
+            <div><img src="images/en.svg">English</div>
+            <div><img src="images/jp.svg">Japanese</div>
+          </div>
+  
+          <h2>INTERESTS & HOBBIES</h2>
+  
+          <div class=" interests">
+            <div><img src="images/technology.svg">Technology</div>
+            <div><img src="images/science.svg">Science</div>
+            <div><img src="images/health.svg">Health</div>
+            <div><img src="images/education.svg">Learning</div>
+            <div><img src="images/photography.svg">Photography</div>
+            <div><img src="images/writing.svg">Blogging</div>
+            <div><img src="images/travel.svg">Travel</div>
+            <div><img src="images/nature.svg">Nature</div>
+          </div>
+  
+        </aside>
+        <main>
+          <h2>WORK EXPERIENCE</h2>
+          <section>
+            <article>
+  
+              <h3>Bright Pixel SA <span class="role">— Web Designer</span></h3>
+              <div class="faded"><span class="date">April 2016 — Present</span><span class="ast">/</span>Lisbon, Portugal</div>
+              <p>
+                Working at BRPX has been an great opportunity to use the wide range of skills in my training, as well as to learn new ones. From simple product pages, to complex react web apps; mentoring start-ups on their projects usability, to revamping their pitch decks; event and portrait photography, to live-streaming events.</br></br>
+                I was part of the founding team of the <strong>Graf.ly</strong> MVP, as Lead Designer and also Project Manager for awhile. We worked closely with Público newspaper in a market validation partnership, and the project came to be selected for WebSummit 2016 alpha start-up program, were we spent a day promoting and gathering feedback non-stop.<br>
+                As a part of the <strong>Labs</strong> team, I engage frequently in brainstorming sessions, do research, and fast prototyping concepts for products and solutions.</br>
+                I'm also involved in the organization of <strong>Pixels.Camp</strong>, the biggest portuguese tech event. 
+              </p>
+            
+              <h4>Featured projects</h4>
+              
+              <div class="project">
+                <div><strong>Probely</strong><a class="project-url" href="https://probely.com/">probe.ly</a></div>
+                <div class="work">Visual Identity <span class="middot">·</span> Product Page <span class="middot">·</span> Web app <span class="middot">·</span> Report & Email design <span class="middot">·</span> Photography</div>
+              </div>
+
+              <!--div class="project">
+                <div><strong>Taikai</strong><a class="project-url" href="https://taikai.network/">taikai.network</a></div>
+                <div class="work">Branding <span class="middot">·</span> Visual Identity <span class="middot">·</span> Product Page <span class="middot">·</span> Web App</div>
+              </div-->
+
+              <div class="project">
+                <div><strong>SONAE IM</strong><a class="project-url" href="https://sonaeim.com/">sonaeim.com</a></div>
+                <div class="work">Visual Identity <span class="middot">·</span> Website <span class="middot">·</span> Photography <span class="middot">·</span> Print <span class="middot">·</span> Style Guide</div>
+              </div>
+
+              <div class="project">
+                <div><strong>Pixels Camp</strong><a class="project-url" href="https://pixels.camp/">pixels.camp</a></div>
+                <div class="work">Event Organization <span class="middot">·</span> Brainstorm <span class="middot">·</span> Website <span class="middot">·</span> Photography <span class="middot">·</span> Print <span class="middot">·</span> Community management</div>
+              </div>
+
+            </article>
+  
+            <article>
+  
+              <h3>MEO – Serviços de Comunicações e Multimédia S.A <span class="role">— Web Designer</span></h3>
+              <div class="faded"><span class="date">December 2005 — March 2016</span><span class="ast">/</span>Lisbon, Portugal </div>
+
+              <p>
+                <strong>SAPO</strong> is Altice's web division in Portugal, that provides a large network of media websites and other content-sharing services in several countries.
+                I had the privilege to collaborate in a lot of projects with very talented people, which contributed immensely to my professional growth. I went from Junior to Lead Designer in charge of the visual identity of the Portal's homepage and core-services (Mail, Blogs, Photos, Videos, etc).</br>
+                </br>
+                The <strong>homepage</strong> required prioritizing speed and user experience while accomodating the needs of the commercial and editorial teams.</br>
+                <strong>Mail</strong> is a core service of <strong>SAPO</strong> with vast demographics posing a great challenge in usability and accessibility. I was part of the team for seveal years and my roles ranged from the user interface design to product pages, as well as marketing and community engagement.</br>
+                <strong>Blogs</strong> was one of my earliest projects, I was tasked with the platform's re-design twice. I also authored a few blog templates and helped the team continuously fine-tune the interface. To this day I still use and cherish very much this blogging platform.</br>
+              </p>
+
+              <h4>Featured projects</h4>
+
+              <div class="project">
+                <div><strong>SAPO</strong><a class="project-url" href="https://sapo.pt/">sapo.pt</a></div>
+                <div class="work">Brainstorm <span class="middot">·</span> Visual Identity <span class="middot">·</span> Information Architecture <span class="middot">·</span> Website</div>
+              </div>
+
+              <div class="project">
+                <div><strong>SAPO Mail</strong><a class="project-url" href="http://mail.sapo.pt">mail.sapo.pt</a></div>
+                <div class="work">Visual Identity <span class="middot">·</span> Usability Testing <span class="middot">·</span> Product Page <span class="middot">·</span> Web & Mobile App</div>
+              </div>
+
+              <div class="project">
+                <div><strong>SAPO Blogs</strong><a class="project-url" href="http://blogs.sapo.pt">blogs.sapo.pt</a></div>
+                <div class="work">Visual Identity <span class="middot">·</span> Interaction Design <span class="middot">·</span> Usability Testing <span class="middot">·</span> Website & Backoffice</div>
+              </div>
+              
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

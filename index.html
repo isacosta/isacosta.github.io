@@ -137,12 +137,12 @@
 
       .container {
         background: white;
-        max-width: 1024px;
+        max-width: 1080px;
         margin: 0 auto;
-        padding: 30px;
+        padding: 3rem;
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 30px;
+        grid-gap: 3rem;
       }
 
       /* HEADER */
@@ -283,7 +283,7 @@
         padding-right: .5rem;
       }
 
-      @media screen and (min-width: 1024px) {
+      @media (min-width: 1024px) {
         .container {
           grid-template-columns: 1fr 2fr;
         }
@@ -291,7 +291,6 @@
           grid-column: span 2;
           flex-direction: row;
           justify-content: space-between;
-          margin-bottom: 1.5rem;
         }
         .contact {
           text-align: right;
@@ -299,11 +298,19 @@
       }
 
       @media print {
+        :root {
+          font-size: 23px;
+        }
         body {
           background: white;
         }
-        h1 {
-          margin-top:0;
+        .container {
+          max-width: none;
+          grid-template-columns: 420px auto;
+        }
+        .page-break-before {
+          page-break-before: always;
+          margin-top: 5rem;
         }
       }
     </style>
@@ -316,7 +323,7 @@
           <h1>Isa Costa</h1>
           <h2>Product Designer</h2>
         </div>
-        <ul class="unstyled contact">
+        <ul id="contact" class="unstyled contact">
           <li><strong><a href="https://isacosta.net/">isacosta.net</a></strong></li>
           <li><a href="mailto:hello@isacosta.net">hello@isacosta.net</a></li>
           <li><a class="gray" href="tel://+351910216755">+351 910 446 225</a></li>
@@ -384,9 +391,9 @@
         </ul>
       </aside>
       <main>
-        <h3>WORK EXPERIENCE</h3>
+        <h3 id="work-experience">WORK EXPERIENCE</h3>
 
-        <article>
+        <article id="talkdesk">
           <h4>Talkdesk <span class="role">— Senior Product Designer</span></h4>
           <p class="meta"><span class="date">September 2020 — Present</span><span class="ast">/</span>Remote, Portugal</p>
 
@@ -410,7 +417,7 @@
           </ul>
         </article>
 
-        <article>
+        <article id="bright-pixel">
           <h4>Bright Pixel SA <span class="role">— UX/UI Designer</span></h4>
           <p class="meta"><span class="date">April 2016 — September 2020</span><span class="ast">/</span>Lisbon, Portugal</p>
 
@@ -419,7 +426,7 @@
           <p>As part of the <strong>Labs</strong> team, I engaged frequently in brainstorming sessions, do research, and fast prototyping concepts for products and solutions.</p>
           <p>I was also involved in the organization of <strong>Pixels.Camp</strong>, the biggest portuguese tech event.</p>
 
-          <h5>Featured projects</h5>
+          <h5 class="page-break-before">Featured projects</h5>
           <ul class="unstyled projects">
             <li>
               <strong>Probely</strong>
@@ -467,7 +474,7 @@
           </ul>
         </article>
 
-        <article>
+        <article id="sapo">
           <h4>MEO - Serviços de Comunicações e Multimédia S.A <span class="role">— Web Designer</span></h4>
           <p class="meta"><span class="date">December 2005 — March 2016</span><span class="ast">/</span>Lisbon, Portugal </p>
 

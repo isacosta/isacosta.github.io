@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <title>Isa Costa · Product Designer</title>
-    <!-- LAST UPDATE IN 11 MAY 2020 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Isa Costa - Product Designer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;500&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">    <style type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;500&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style type="text/css">
       :root {
         --background: #F5F5F5;
         --very-light-gray: #eee;
@@ -39,18 +39,6 @@
         border: 0;
       }
 
-      .unstyled {
-        list-style: none;
-      }
-
-      .gray {
-        color: var(--light-gray);
-      }
-
-      .horizontal li {
-        display: inline-block;
-      }
-
       a {
         text-decoration: none;
         color: var(--very-dark-gray);
@@ -58,6 +46,10 @@
 
       p {
         margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
       }
 
       h1, h3, h4, h5 {
@@ -75,7 +67,7 @@
       }
 
       h2 {
-        font-size: var(--font-size-smaller); /* px */
+        font-size: var(--font-size-smaller);
         font-weight: 700;
         letter-spacing: .25rem;
         position: absolute;
@@ -123,13 +115,10 @@
         font-size: var(--font-size-large);
       }
 
-      .middot {
-        padding: 0 5px;
+      .gray {
+        color: var(--light-gray);
       }
 
-      .ast {
-        padding: 0 10px;
-      }
       /* LAYOUT */
 
       body {
@@ -183,12 +172,16 @@
       }
 
       .skills li:not(:last-child) {
-        padding-bottom: 8px;
+        margin-bottom: .5rem;
+      }
+
+      .skills span {
+        margin: 0 .25rem;
       }
 
       .education li {
-        margin-bottom: 4px;
-        font-size: var(--font-size-small)
+        font-size: var(--font-size-small);
+        margin-bottom: .25rem;
       }
 
       .education h3 {
@@ -219,6 +212,7 @@
       }
 
       /* MAIN */
+
       article:not(:last-of-type) {
         padding-bottom: 1.5rem;
         margin-bottom: 1.5rem;
@@ -230,14 +224,18 @@
         color: var(--light-gray);
       }
 
+      .meta time {
+        font-style: italic;
+        letter-spacing: .025rem;
+      }
+
+      .meta span {
+        padding: 0 .25rem;
+      }
+
       .role {
         font-weight: 400;
         position: relative;
-      }
-
-      .date {
-        font-style: italic;
-        letter-spacing: .025rem;
       }
 
       article p {
@@ -324,23 +322,23 @@
           <h1>Isa Costa</h1>
           <h2>Product Designer</h2>
         </div>
-        <ul id="contact" class="unstyled contact">
+        <ul id="contact" class="contact">
           <li><strong><a href="https://isacosta.net/">isacosta.net</a></strong></li>
           <li><a href="mailto:hello@isacosta.net">hello@isacosta.net</a></li>
         </ul>
       </header>
       <aside>
         <h3 id="tools-and-technologies">Tools & Technologies</h3>
-        <ul class="unstyled skills">
-          <li>Figma <span class="middot">·</span> Sketch <span class="middot">·</span> XD <span class="middot">·</span> Miro</li>
-          <li>Photoshop <span class="middot">·</span> Lightroom</li>
-          <li>Agile <span class="middot">·</span> Jira <span class="middot">·</span> Confluence <span class="middot">·</span> Trello</li>
-          <li>Design Systems <span class="middot">·</span> CSS & HTML <span class="middot">·</span> Frameworks</li>
-          <li>Visual Studio Code <span class="middot">·</span> Chrome DevTools <span class="middot">·</span> Git</li>
+        <ul class="skills">
+          <li>Figma <span>·</span> Sketch <span>·</span> XD <span>·</span> Miro</li>
+          <li>Photoshop <span>·</span> Lightroom</li>
+          <li>Agile <span>·</span> Jira <span>·</span> Confluence <span>·</span> Trello</li>
+          <li>Design Systems <span>·</span> CSS & HTML <span>·</span> Frameworks</li>
+          <li>Visual Studio Code <span>·</span> Chrome DevTools <span>·</span> Git</li>
         </ul>
         
         <h3 id="hard-skills">Hard Skills</h3>
-        <ul class="unstyled skills">
+        <ul class="skills">
           <li>Design Principles</li>
           <li>Visual Communication</li>
           <li>Information Architecture</li>
@@ -353,7 +351,7 @@
         </ul>
         
         <h3 id="soft-skills">Soft Skills</h3>
-        <ul class="unstyled skills">
+        <ul class="skills">
           <li>Design Thinking</li>
           <li>Problem Solving</li>
           <li>Critical Thinking</li>
@@ -364,7 +362,7 @@
         </ul>
         
         <h3 id="education">Education</h3>
-        <ul class="unstyled education">
+        <ul class="education">
           <li><strong>ETIC_</strong></li>
           <li>Escola de Tecnologias Inovação e Criação</li>
           <li>Multimedia Level IV</li>
@@ -372,14 +370,14 @@
         </ul>
 
         <h3 id="languages">Languages</h3>
-        <ul class="unstyled icons">
+        <ul class="icons">
           <li><img src="images/progress-100.svg" width="40" height="40" alt="native">Portuguese</li>
           <li><img src="images/progress-75.svg" width="40" height="40" alt="fluent">English</li>
           <li><img src="images/progress-25.svg" width="40" height="40" alt="basic">Japanese</li>
         </ul>
 
         <h3 id="interests-and-hobbies">Interests & Hobbies</h3>
-        <ul class="unstyled icons">
+        <ul class="icons">
           <li><img src="images/technology.svg" width="40" height="40" alt="a rocket ship">Technology</li>
           <li><img src="images/science.svg" width="40" height="40" alt="test tubes">Science</li>
           <li><img src="images/health.svg" width="40" height="40" alt="heart rate">Health</li>
@@ -395,7 +393,7 @@
 
         <article id="talkdesk">
           <h4>Talkdesk <span class="role">— Senior Product Designer</span></h4>
-          <p class="meta"><span class="date">September 2020 — Present</span><span class="ast">/</span>Remote, Portugal</p>
+          <p class="meta"><time datetime="2020-09">September 2020</time> — <time>Present</time> <span>/</span> Remote, Portugal</p>
 
           <p>I joined <strong>Talkdesk</strong> in the begging of the growth and expansion stage. I'm part of the initiative to transition what once was a voice-only solution to a full omni-channel experience with the addition of SMS, chat, email, social, and other digital channels.</p>
           <p>As a member of the <strong>Product Design</strong> team, I collaborate with other designers to create an intuitive and seamless experience for our customers. We exchange knowledge to ensure design consistency across our products, share feedback to enhance the Design System, and engage in discussions aimed at improving our organization's UX maturity and other design-related matters.</p>
@@ -403,11 +401,11 @@
           <p>I currently lead a small team of designers. I oversee their work, provide mentoring, and act as a liaison between the team, product and leadership.</p>
 
           <h5>Featured projects</h5>
-          <ul class="unstyled projects">
+          <ul class="projects">
             <li>
               <strong>Digital Engagement</strong>
               <a class="link" href="https://www.talkdesk.com/cloud-contact-center/omnichannel-engagement/digital/" target="_blank" rel="noreferrer">omnichannel engagement / digital</a>
-              <ul class="unstyled work">
+              <ul class="work">
                 <li>Product ideation & Strategy</li>
                 <li>User Research & Testing</li>
                 <li>UX & UI design</li>
@@ -419,7 +417,7 @@
 
         <article id="bright-pixel">
           <h4>Bright Pixel SA <span class="role">— UX/UI Designer</span></h4>
-          <p class="meta"><span class="date">April 2016 — September 2020</span><span class="ast">/</span>Lisbon, Portugal</p>
+          <p class="meta"><time datetime="2016-04">April 2016</time> — <time date-time="2020-09">September 2020</time> <span>/</span> Lisbon, Portugal</p>
 
           <p>At <strong>BRPX</strong> I had the opportunity to use the wide range of skills I had in my training, as well as to learn new ones. From simple product pages, to complex react web apps; mentoring start-ups on their projects usability, to revamping their pitch decks; event and portrait photography, to live-streaming events.</p>
           <p>I was part of the founding team of the <strong>Graf.ly</strong> MVP, first as the Lead Designer, then as Project Manager. We worked closely with Público newspaper in a market validation partnership, and the project came to be selected for WebSummit 2016 alpha start-up program, were we spent a day promoting and gathering feedback non-stop.</p>
@@ -427,11 +425,11 @@
           <p>I was also involved in the organization of <strong>Pixels Camp</strong>, the biggest portuguese tech event.</p>
 
           <h5 class="page-break-before">Featured projects</h5>
-          <ul class="unstyled projects">
+          <ul class="projects">
             <li>
               <strong>Probely</strong>
               <a class="link" href="https://probely.com/" target="_blank" rel="noreferrer">probe.ly</a>
-              <ul class="unstyled work">
+              <ul class="work">
                 <li>Visual Identity</li>
                 <li>Product Page</li>
                 <li>Web app</li>
@@ -442,7 +440,7 @@
             <li>
               <strong>Taikai</strong>
               <a class="link" href="https://taikai.network/" target="_blank" rel="noreferrer">taikai.network</a>
-              <ul class="unstyled work">
+              <ul class="work">
                 <li>Branding</li>
                 <li>Visual Identity</li>
                 <li>Product Page</li>
@@ -452,7 +450,7 @@
             <li>
               <strong>SONAE IM</strong>
               <a class="link" href="https://sonaeim.com/" target="_blank" rel="noreferrer">sonaeim.com</a>
-              <ul class="unstyled work">
+              <ul class="work">
                 <li>Visual Identity</li>
                 <li>Website</li>
                 <li>Photography</li>
@@ -463,7 +461,7 @@
             <li>
               <strong>Pixels Camp</strong>
               <a class="link" href="https://pixels.camp/" target="_blank" rel="noreferrer">pixels.camp</a>
-              <ul class="unstyled work">
+              <ul class="work">
                 <li>Event Organization</li>
                 <li>Brainstorm</li>
                 <li>Website</li>
@@ -476,7 +474,7 @@
 
         <article id="sapo">
           <h4>MEO - Serviços de Comunicações e Multimédia S.A <span class="role">— Web Designer</span></h4>
-          <p class="meta"><span class="date">December 2005 — March 2016</span><span class="ast">/</span>Lisbon, Portugal </p>
+          <p class="meta"><time datetime="2005-12">December 2005</time> — <time datetime="2016-03">March 2016</time> <span>/</span> Lisbon, Portugal</p>
 
           <p><strong>SAPO</strong> is Altice's web division in Portugal, that provides a large network of media websites and other content-sharing services in several countries. I had the privilege to collaborate in a lot of projects with very talented people, which contributed immensely to my professional growth. I went from Junior to Lead Designer in charge of the visual identity of the Portal's homepage and core-services (Mail, Blogs, Photos, Videos, etc).</p>
           <p>The <strong>homepage</strong> required prioritizing performance, user experience and accessibilty, while accomodating the needs of the commercial and editorial teams.</p>
@@ -484,11 +482,11 @@
           <p><strong>Blogs</strong> was one of my earliest projects, I was tasked with the platform's re-design twice. I also authored a few blog templates and helped the team continuously fine-tune the interface. To this day I still use and cherish very much this blogging platform.</p>
 
           <h5>Featured projects</h5>
-          <ul class="unstyled projects">
+          <ul class="projects">
             <li>
               <strong>SAPO</strong>
               <a class="link" href="https://sapo.pt/" target="_blank" rel="noreferrer">sapo.pt</a>
-              <ul class="unstyled work">
+              <ul class="work">
                 <li>Brainstorm</li>
                 <li>Visual Identity</li>
                 <li>Information Architecture</li>
@@ -498,7 +496,7 @@
             <li>
               <strong>SAPO Mail</strong>
               <a class="link" href="http://mail.sapo.pt" target="_blank" rel="noreferrer">mail.sapo.pt</a>
-              <ul class="unstyled work"><li>Visual Identity</li>
+              <ul class="work"><li>Visual Identity</li>
                 <li>Usability Testing</li>
                 <li>Product Page</li>
                 <li>Web & Mobile App</li>
@@ -507,7 +505,7 @@
             <li>
               <strong>SAPO Blogs</strong>
               <a class="link" href="http://blogs.sapo.pt" target="_blank" rel="noreferrer">blogs.sapo.pt</a>
-              <ul class="unstyled work">
+              <ul class="work">
                 <li>Visual Identity</li>
                 <li>Interaction Design</li>
                 <li>Usability Testing</li>

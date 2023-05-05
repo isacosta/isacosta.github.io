@@ -11,10 +11,43 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="canonical" href="https://isacosta.pages.dev">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;500&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" href="/fonts/BarlowSemiCondensed-Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/BarlowSemiCondensed-Medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Lato-Italic.woff2" as="font" type="font/woff2" crossorigin>
     <style type="text/css">
+      @font-face {
+        font-family: 'Barlow Semi Condensed';
+        src: local('Barlow Semi Condensed Light'), local('BarlowSemiCondensed-Light'), url('/fonts/BarlowSemiCondensed-Light.woff2') format('woff2');
+        font-weight: 300;
+        font-display: optional;
+      }
+      @font-face {
+        font-family: 'Barlow Semi Condensed';
+        src: local('Barlow Semi Condensed Medium'), local('BarlowSemiCondensed-Medium'), url('/fonts/BarlowSemiCondensed-Medium.woff2') format('woff2');
+        font-weight: 500;
+        font-display: optional;
+      }
+      @font-face {
+        font-family: 'Lato';
+        src: local('Lato Regular'), local('Lato-Regular'), url('/fonts/Lato-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-display: optional;
+      }
+      @font-face {
+        font-family: 'Lato';
+        src: local('Lato Bold'), local('Lato-Bold'), url('/fonts/Lato-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-display: optional;
+      }
+      @font-face {
+        font-family: 'Lato';
+        src: local('Lato Italic'), local('Lato-Italic'), url('/fonts/Lato-Italic.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+        font-display: optional;
+      }
       :root {
         --background: #F5F5F5;
         --very-light-gray: #eee;
@@ -425,7 +458,7 @@
           <h4>Bright Pixel SA <span class="role">— UX/UI Designer</span></h4>
           <p class="meta"><time datetime="2016-04">April 2016</time> — <time date-time="2020-09">September 2020</time> <span>/</span> Lisbon, Portugal</p>
 
-          <p>At <strong>BRPX</strong> I had the opportunity to use the wide range of skills I had in my training, as well as to learn new ones. From simple product pages, to complex react web apps; mentoring start-ups on their projects usability, to revamping their pitch decks; event and portrait photography, to live-streaming events.</p>
+          <p>At <strong>BRPX</strong> I had the opportunity to use the wide range of skills I had in my training, as well as to learn new ones. From simple product pages, to complex react web apps, mentoring start-ups on their projects usability, to revamping their pitch decks, event and portrait photography, to live-streaming events.</p>
           <p>I was part of the founding team of the <strong>Graf.ly</strong> MVP, first as the Lead Designer, then as Project Manager. We worked closely with Público newspaper in a market validation partnership, and the project came to be selected for WebSummit 2016 alpha start-up program, were we spent a day promoting and gathering feedback non-stop.</p>
           <p>As part of the <strong>Labs</strong> team, I engaged frequently in brainstorming sessions, doing research, and fast prototyping concepts for products and solutions.</p>
           <p>I was also involved in the organization of <strong>Pixels Camp</strong>, the biggest portuguese tech event.</p>
